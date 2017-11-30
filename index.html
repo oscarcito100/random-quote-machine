@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<!-- HEAD -->
+<head>
+  <!-- Title on the tab -->
+  <title>Random Quote Machine by Oscar Germade</title>
+
+  <!-- Metadata -->
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="description" content="Project: Random Quote Machine"/>
+  <meta name="author" content="Oscar Ruben Germade-Gonzalez Rios"/>
+  <meta name="keywords" content="Oscar Germade Random Quote Machine"/>
+
+  <!-- Bootstrap files -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- FontAwsome Icons -->
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
+
+  <!-- Google Font Spectral+sc -->
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Slab|Spectral+SC" rel="stylesheet">
+
+  <!-- CSS files -->
+  <link rel="stylesheet" href="css/style.css"/>
+
+  <!-- Javascript files-->
+  <script src="js/getDataFromApi.js"></script>
+</head>
+
+<!-- Calling function to load a quote and its author when the page is loaded -->
+<body onload="getQuote()">
+  <div class="container-fluid text-center">
+
+    <!-- creating a row with one column with 3 containers and a subrow -->
+    <div class="row">
+      <div class="col-sm-6 col-sm-offset-3">
+        <!-- container for heading -->
+        <section id="headerContainer">
+          <h1 id="header">A RANDOM QUOTE MACHINE</h1>
+          <h4 id="subHeader">Choose the quote of the day to share it!</h4>
+        </section>
+
+        <!-- container for holding the quotes -->
+        <section id="bodyContainer">
+          <blockquote id="blockquote">
+            <span><i class="fa fa-quote-left fa-3x" aria-hidden="true"></i></span>
+            <p id="quote"></p>
+            <span><i class="fa fa-quote-right fa-3x" aria-hidden="true"></i></span>
+            <footer><cite id="author"></cite></footer>
+          </blockquote>
+        </section>
+
+        <!-- container for the buttons -->
+        <section id="footerContainer">
+          <button type="button" id="newQuote" class="btn btn-default"><i class="fa fa-refresh fa-spin" aria-hidden="true"></i> New Quote</button>
+          <button type="button" id="tweetIt" class="btn btn-default" title="Share this quote in twitter"><i class="fa fa-twitter" aria-hidden="true"></i> Tweet it</button>
+	      </section>
+
+        <!-- Subrow to act as a footer -->
+        <div class="row">
+          <div class="col-sm-6">
+            <p class="footerText">Written and coded by <a href="https://www.freecodecamp.com/oscarcito100" target="_blank" id="myName" title="Go to my profile in FreeCodeCamp">Oscar Germade.</a></p>
+  		      <p class="footerText">&copy; All rights reserved. 2017</p>
+          </div>
+          <div class="col-sm-6">
+            <ul id="fa-ul"> <!-- social media links -->
+              <li class="footerSocialMediaList"><a href="https://www.linkedin.com/in/oscar-ruben-germade-gonzalez-ríos-6ba5aa51" target="_blank" title="My Linkedin"><i id="linkedin" class="fa fa-fw fa-linkedin fa-3x" aria-hidden="true"></i></a></li>
+              <li class="footerSocialMediaList"><a href="https://www.twitter.com/oscarcito1986" target="_blank" title="My Twitter"><i id="twitter" class="fa fa-fw fa-twitter fa-3x" aria-hidden="true"></i></a></li>
+              <li class="footerSocialMediaList"><a href="https://www.github.com/oscarcito100" target="_blank" title="My Github"><i id="github" class="fa fa-fw fa-github fa-3x" aria-hidden="true"></i></a></li>
+              <li class="footerSocialMediaList"><a href="https://www.facebook.com/oscarruben.germadegonzalezrios" target="_blank" title="My Facebook"><i id="facebook" class="fa fa-fw fa-facebook-official fa-3x" aria-hidden="true"></i></a></li>
+  		      </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
